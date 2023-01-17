@@ -44,6 +44,8 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(5000 || 8001, () =>
-  console.log("Server is running on port http://localhost:5000")
+const port = process.env.PORT || 8001;
+
+app.listen(port, () =>
+  console.log(`Server is running on port http://localhost:${port}`)
 );
